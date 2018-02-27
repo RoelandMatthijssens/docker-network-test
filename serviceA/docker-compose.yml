@@ -1,0 +1,11 @@
+version: '3'
+# To make the external links work they need to be on the same network
+networks:
+  test_network:
+     driver: bridge
+
+services:
+  AAA:
+    networks:
+      - test_network
+    image: python
